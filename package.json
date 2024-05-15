@@ -1,0 +1,16 @@
+{
+  "name": "ldapphonebook",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sam Machin",
+  "license": "MIT",
+  "dependencies": {
+    "ldapjs": "^3.0.7",
+    "node-fetch": "^2.7.0",
+    "pino": "^9.0.0"
+  }
+}
