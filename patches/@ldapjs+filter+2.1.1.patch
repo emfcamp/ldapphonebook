@@ -1,0 +1,13 @@
+diff --git a/node_modules/@ldapjs/filter/lib/filters/substring.js b/node_modules/@ldapjs/filter/lib/filters/substring.js
+index d7134b2..ff82319 100644
+--- a/node_modules/@ldapjs/filter/lib/filters/substring.js
++++ b/node_modules/@ldapjs/filter/lib/filters/substring.js
+@@ -214,7 +214,7 @@ class SubstringFilter extends FilterString {
+     })
+     if (this.#final) { re += escapeRegExp(this.#final) + '$' }
+ 
+-    const matcher = new RegExp(re)
++    const matcher = new RegExp(re, strictAttrCase ? '' : 'i')
+     return testValues({
+       rule: v => matcher.test(v),
+       value: targetValue
