@@ -76,7 +76,7 @@ function patchEntry(res, entry, nofiltering) {
 
 server.search('dc=emf', (req, res, next) => {
     for (const entry of phonebook) {
-        if (req.filter.matches(entry.attributes)){
+        if (req.filter.matches(entry.attributes, /* strictCase */ false)){
             res.send(patchEntry(res, entry));
         }
             
